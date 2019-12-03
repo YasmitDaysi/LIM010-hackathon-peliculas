@@ -33,7 +33,6 @@ uno de pelis de terror... o... ¡lo que quieran!
 
 * Este proyecto se debe resolver en equipos de hasta 4 personas.
 * Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
 
 ## Objetivos de aprendizaje
 
