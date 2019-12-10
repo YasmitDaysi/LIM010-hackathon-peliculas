@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Data Lovers</title>
+  <title>Hackthon-Peliculas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
@@ -12,32 +12,32 @@
 
 </head>
 <body>
-    <section class="vistaInicio">
-           <header class="contenedor1">
-                <div class="contenedorbtn">
-                    <form>
-                        <img src="" alt="">
-                        <h1 class="tg">titulo aqui</h1>
-                        <div>
-                            <button>Buscar</button>
-                            <input type="search" id="miBusqueda" name="">
-                        </div>
-                    </form>
-                    <nav>
-                        <ul class="navOpciones">
-                            <li>Peliculas</li>
-                            <li>Series</li>
-                            <li>Mi lista</li>
-                        </ul>
-                    </nav>
-                </div>
-           </header>
+    <header class="contenedor1">
+         <div class="contenedorbtn">
+             <form>
+                 <img src="" alt="">
+                 <h1 class="titulo">titulo aqui</h1>
+                 <div>
+                     <button>Buscar</button>
+                     <input type="search" id="miBusqueda" name="">
+                 </div>
+             </form>
+             <nav>
+                 <ul class="navOpciones">
+                     <li>Peliculas</li>
+                     <li>Series</li>
+                     <li>Mi lista</li>
+                 </ul>
+             </nav>
+         </div>
+    </header>
+    <section id="vista1">
 
 
             <section class="contenedorPeliculas">
               <div class="headerPeliculas">
                 <p>peliculas</p>
-              <a href="#">ver mas</a>
+              <a id="verMasPeliculas" href="#">ver mas</a>
             </div>
               <div id="mostrarP"  class="mostrarPelicula">
 
@@ -47,7 +47,7 @@
             <section class="contenedorSeries">
               <div class="headerSeries">
                 <p>Series de TV </p>
-              <a href="#">ver mas</a>
+              <a id="verMasSeries" href="#">ver mas</a>
             </div>
               <div id="mostrarS"class="mostrarSeries">
               </div>
@@ -56,15 +56,16 @@
     </section>
   
 
-    <section class="vistaPeliculas">
+    <section class="hide" id="secPeliculas">
         <h2>Peliculas</h2>
-        <div>Aqui va toda las peliculas</div>
+        <div id="todasPeliculas" class="todasPeliculasCss"></div>
 
     </section>
 
-    <section class="vistaSerie">
+    <section class="hide" id="secSeries">
         <h3>Series</h3>
-        <div>Aqui va toda las series</div>
+        <div id="todasSeries" class="todasSeriesCss">
+        </div>
     </section>
 
     <section class="vistaCaracteristicas">
@@ -72,7 +73,7 @@
         <div></div>
     </section>
 
-    <section>
+    <section class="hide">
         <p>Mi lista</p>
     </section>
 

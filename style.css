@@ -2,6 +2,9 @@
   margin: 0%;
   padding: 0%;
 }
+.hide{
+  display:none;
+}
 .contenedorbtn{
     display:flex;
     background: blueviolet;
@@ -11,34 +14,23 @@
 .navOpciones{
     display: flex;
 }
-.tg{
+.titulo{
     font-size:10px;
-}
-.contenedorx{
-    display: flex;
-    background-color: aquamarine;
-    justify-content: space-evenly;
-    }
-
-.contenedorx2{
-    background: cornflowerblue;
-    }  
-.contenedorSeries{
+} 
+.contenedorSeries,
+.contenedorPeliculas{
     display:flex;
     flex-direction: column;
     background-color:gainsboro;
 
     }
-.contenedorPeliculas{
-    display: flex;
-    flex-direction: column;
 
-}
 
-.headerPeliculas{
+.headerPeliculas,
+.headerSeries{
   display: flex;
   background-color: antiquewhite;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .mostrarPelicula,
@@ -56,8 +48,8 @@ margin:5px;
 border-radius: 10px;
 }
 
-.headerSeries{
-  background-color: antiquewhite;
+.todasPeliculasCss,
+.todasSeriesCss{
   display: flex;
-    justify-content: space-around;
+    flex-flow: wrap;
 }
