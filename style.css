@@ -1,0 +1,63 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.contenedorbtn{
+    display:flex;
+    background: blueviolet;
+    justify-content: space-evenly;
+    }
+
+.navOpciones{
+    display: flex;
+}
+.tg{
+    font-size:10px;
+}
+.contenedorx{
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-evenly;
+    }
+
+.contenedorx2{
+    background: cornflowerblue;
+    }  
+.contenedorSeries{
+    display:flex;
+    flex-direction: column;
+    background-color:gainsboro;
+
+    }
+.contenedorPeliculas{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headerPeliculas{
+  display: flex;
+  background-color: antiquewhite;
+    justify-content: space-evenly;
+}
+
+.mostrarPelicula,
+.mostrarSeries {
+display: flex;
+flex-flow: wrap;
+}
+
+.cajas {
+  width: 250px;
+ height: 350px;
+  background-size:cover;
+background-position: bottom;
+margin:5px;
+border-radius: 10px;
+}
+
+.headerSeries{
+  background-color: antiquewhite;
+  display: flex;
+    justify-content: space-around;
+}
