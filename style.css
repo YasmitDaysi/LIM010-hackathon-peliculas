@@ -25,7 +25,43 @@
 
     }
 
-
+    body {
+      font-family: sans-serif;
+    }
+    .contenedor {
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+    .botones {
+      font-size: 50px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      position: apsolute;
+      color: #fff;
+       box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
+       border-radius: 50%;
+    }
+    .botones:hover {
+      cursor: pointer;
+      transform: scale(1.2, 1.2);
+    }
+    .atras,
+    .adelante {
+      margin-top: -300px;
+      z-index:1;
+     }
+    .btnAdelanteAtras{
+      display: flex;
+      justify-content: space-between;
+    }
+    .imagenCss{
+      width: 100%;
+      height: 500px;
+      z-index: 3;
+    }
 .headerPeliculas,
 .headerSeries{
   display: flex;
@@ -34,22 +70,30 @@
 }
 
 .mostrarPelicula,
-.mostrarSeries {
+.mostrarSeries,
+.todasPeliculasCss,
+.todasSeriesCss {
 display: flex;
 flex-flow: wrap;
 }
-
 .cajas {
   width: 250px;
  height: 350px;
-  background-size:cover;
+background-size:cover;
 background-position: bottom;
 margin:5px;
 border-radius: 10px;
 }
 
-.todasPeliculasCss,
-.todasSeriesCss{
-  display: flex;
-    flex-flow: wrap;
+.headerContenedor {
+  position: relative;
+}
+
+.panelDerecha {
+  height: 99%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 33%;
 }
