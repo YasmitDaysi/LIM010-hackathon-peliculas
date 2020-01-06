@@ -29,7 +29,14 @@
 }
 
 .navOpciones{
-    display: flex;
+  margin-top: 13px;
+  display: flex;
+  list-style: none;
+  color: azure;
+  font-size: 20px;
+}
+.TvSerie{
+  margin-left: 15px;
 }
 .titulo-panel2{
   margin: 0 0 10px;

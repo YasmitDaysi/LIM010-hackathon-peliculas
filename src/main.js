@@ -18,6 +18,10 @@ const idAtras = document.getElementById('id-atras');
 const img = document.getElementById('imagen');
 const titulo = document.getElementById('titulo-panel2');
 const descripcion = document.getElementById('descripcion-panel');
+const titulo1 = document.getElementById('titulo1');
+const Movies = document.getElementById('Movies');
+const TvSeries = document.getElementById('TvSerie');
+
 
 const optenerImagenesCarrousel = (ultimasPeliculas) => {
   const imagenes = ultimasPeliculas.results;
@@ -69,7 +73,9 @@ const mostrarFiltro = (arrayObjetc, texto) => {
   valorFiltrado.forEach((Element) => {
     result += `<img class='cajas ' src="https://image.tmdb.org/t/p/original${Element.imagen}"/>`;
   });
-  document.getElementById('vista1').innerHTML = result;
+  vista1.classList.add('hide');
+  vistaCaracteristicas.classList.remove('hide');
+  vistaCaracteristicas.innerHTML = result;
 };
 
 const mostraPelicula = (arrayObjetc) => {
@@ -222,4 +228,23 @@ verMasPeliculas.addEventListener('click', () => {
 verMasSeries.addEventListener('click', () => {
   secSeries.classList.remove('hide');
   vista1.classList.add('hide');
+});
+Movies.addEventListener('click', () => {
+  vista1.classList.add('hide');
+  vistaCaracteristicas.classList.add('hide');
+  secPeliculas.classList.remove('hide');
+  secSeries.classList.add('hide');
+});
+TvSeries.addEventListener('click', () => {
+  vista1.classList.add('hide');
+  vistaCaracteristicas.classList.add('hide');
+  secSeries.classList.remove('hide');
+  secPeliculas.classList.add('hide');
+});
+
+titulo1.addEventListener('click', () => {
+  secSeries.classList.add('hide');
+  secPeliculas.classList.add('hide');
+  vistaCaracteristicas.classList.add('hide');
+  vista1.classList.remove('hide');
 });
