@@ -10,14 +10,37 @@
     background: blueviolet;
     justify-content: space-evenly;
     }
+.cabecera{
+  display: flex;
+}
+.btn-buscar,
+.titulo1{
+  padding: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #222222;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+ 
+}
+.input-busqueda{
+  font-size: 20px;
+}
 
 .navOpciones{
     display: flex;
 }
-.titulo{
-    font-size:10px;
-    color: #fff;
-} 
+.titulo-panel2{
+  margin: 0 0 10px;
+    font-size: 30px;
+    color: #3eb495;
+    font-family: montserrat;
+}
+.descripcion-panel{
+  font-size: 20px;
+  color: #fff;
+}
 .contenedorSeries,
 .contenedorPeliculas{
     display:flex;
@@ -34,6 +57,9 @@
       position: relative;
       height: 100%;
     }
+    .verMas{
+      text-decoration: none;
+    }
     .botones {
       font-size: 50px;
       width: 70px;
@@ -44,6 +70,10 @@
       color: #fff;
        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
        border-radius: 50%;
+    }
+    .headerContenedor {
+      position: relative;
+      margin-top: 5px;
     }
     .botones:hover {
       cursor: pointer;
@@ -60,18 +90,20 @@
     }
     .imagenCss{
       width: 100%;
-      height: 500px;
+      height: 550px;
       z-index: 3;
+      
+      
     }
 .headerPeliculas,
 .headerSeries{
   display: flex;
-  background-color: antiquewhite;
-    justify-content: space-around;
+ justify-content: space-around;
+ font-size:20px;
 }
 
 .mostrarPelicula,
-.mostrarSeries,
+.mostrar-series,
 .todasPeliculasCss,
 .todasSeriesCss {
 display: flex;
@@ -87,10 +119,33 @@ background-position: bottom;
 margin:5px;
 border-radius: 10px;
 }
+.divTituloDisc{
+  display: flex;
+  flex-direction: column;
 
-.headerContenedor {
-  position: relative;
 }
+.divContenedor{
+  display: flex;
+  margin: 70px;
+}
+.titulo{
+  font-size:40px;
+  color: mediumslateblue;
+}
+.descripcion{
+  font-size: 24px;
+  margin-top: 15px;
+}
+.imagenes{
+  width: 400px;
+  background-size: cover;
+  background-position: bottom;
+  margin: 15px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+
 
 .panelDerecha {
   height: 99%;
@@ -99,4 +154,5 @@ border-radius: 10px;
   top: 0;
   background: rgba(0, 0, 0, 0.5);
   width: 33%;
+  padding: 0px 30px;
 }
