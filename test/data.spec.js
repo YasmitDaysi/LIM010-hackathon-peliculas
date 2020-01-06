@@ -1,4 +1,4 @@
-// importamos la función `example`
+// Importamos la función `example`
 import { busquedaPeliculaSeries, detalleP, detalleS } from '../src/data';
 
 describe('busquedaPeliculaSeries', () => {
