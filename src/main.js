@@ -209,6 +209,8 @@ expobusqueda().then((responseText) => {
   const data = busquedaPeliculaSeries(responseText);
   document.getElementById('boton-buscar').addEventListener('click', () => {
     const valorTexto = document.getElementById('miBusqueda');
+    vista1.classList.add('hide');
+    vistaCaracteristicas.classList.remove('hide');
     mostrarFiltro(data, valorTexto.value);
   });
 });
