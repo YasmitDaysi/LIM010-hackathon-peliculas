@@ -1,5 +1,6 @@
 // importamos la función `example`
-import { busquedaPeliculaSeries, detalleP, detalleS } from '../src/data';
+import { busquedaPeliculaSeries, detalleP, detalleS, expobusqueda } from '../src/data';
+
 
 describe('busquedaPeliculaSeries', () => {
   it('debería ser una función', () => {
@@ -89,5 +90,11 @@ describe('detalleS', () => {
         id: 456,
       }];
     expect(detalleS(idSerie, inputArraObjet)).toEqual(output);
+  });
+});
+
+describe('expobusqueda', () => {
+  it('debería ser una promesa', () => {
+    expect(typeof expobusqueda).toBe('promesa');
   });
 });
