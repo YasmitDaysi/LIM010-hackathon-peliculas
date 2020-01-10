@@ -208,7 +208,7 @@ const mostrarTodasSeries = (todasSeries) => {
 expobusqueda().then((responseText) => {
   const data = busquedaPeliculaSeries(responseText);
   document.getElementById('boton-buscar').addEventListener('click', () => {
-    const valorTexto = document.getElementById('miBusqueda');
+    const valorTexto = document.getElementById('mi-Busqueda');
     vista1.classList.add('hide');
     vistaCaracteristicas.classList.remove('hide');
     mostrarFiltro(data, valorTexto.value);

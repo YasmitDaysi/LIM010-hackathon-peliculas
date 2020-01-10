@@ -37,9 +37,15 @@ y de equipo.
 - [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [x] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [x] Utilizar ES Modules (`import` | `export`).
+- [] Uso de callbacks
+- [] Consumo de Promesas
+- [] Uso ES modules (import | export)
 
-### Pruebas Unitarias (_testing_)
+### Testing
 - [x] Testear funciones (funciones puras).
+- []Testeo de tus funciones
+- []Testeo asíncrono
+- []Mocking
 
 ### Git y GitHub
 - [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).

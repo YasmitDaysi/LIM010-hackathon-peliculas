@@ -54,5 +54,6 @@ export const expormostrarSeries = () => fetch('https://api.themoviedb.org/3/tv/p
 
 export const expormostrarTseries = () => fetch('https://api.themoviedb.org/3/tv/popular?api_key=b8902142fac2162fc1931948fcaaa1af&language=en-US&page=1')
   .then((response) => response.json());
+
 export const exopImagenesCarrousel = () => fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=b8902142fac2162fc1931948fcaaa1af&language=en-US&page=1')
   .then((response) => response.json());
