@@ -21,6 +21,8 @@ const descripcion = document.getElementById('descripcion-panel');
 const titulo1 = document.getElementById('titulo1');
 const Movies = document.getElementById('Movies');
 const TvSeries = document.getElementById('TvSerie');
+const btnBuscar = document.getElementById('boton-buscar');
+const inputBusqueda = document.getElementById('input-busqueda');
 
 
 const optenerImagenesCarrousel = (ultimasPeliculas) => {
@@ -28,7 +30,7 @@ const optenerImagenesCarrousel = (ultimasPeliculas) => {
   let cont = 0;
 
   img.src = `https://image.tmdb.org/t/p/original${imagenes[cont].backdrop_path}`;
-  titulo.innerHTML = `<h2>${imagenes[cont].title}</h2>`;
+  titulo.innerHTML = `<h2 class="titulo-panel2">${imagenes[cont].title}</h2>`;
   descripcion.innerHTML = `<p>${imagenes[cont].overview}</p>`;
   idAdelante.addEventListener('click', () => {
     titulo.innerHTML = '';
@@ -43,7 +45,7 @@ const optenerImagenesCarrousel = (ultimasPeliculas) => {
     } else {
       cont = 0;
       img.src = `https://image.tmdb.org/t/p/original${imagenes[0].backdrop_path}`;
-      titulo.innerHTML = `<h2>${imagenes[0].title}</h2>`;
+      titulo.innerHTML = `<h2 class="titulo-panel2">${imagenes[0].title}</h2>`;
       descripcion.innerHTML = `<p>${imagenes[0].overview}</p>`;
     }
   });
@@ -59,7 +61,7 @@ const optenerImagenesCarrousel = (ultimasPeliculas) => {
       descripcion.appendChild(descripcionTextt);
     } else {
       img.src = `https://image.tmdb.org/t/p/original${imagenes[imagenes.length - 1].backdrop_path}`;
-      titulo.innerHTML = `<h2>${imagenes[imagenes.length - 1].title}</h2>`;
+      titulo.innerHTML = `<h2 class="titulo-panel2">${imagenes[imagenes.length - 1].title}</h2>`;
       descripcion.innerHTML = `<p>${imagenes[imagenes.length - 1].overview}</p>`;
       cont = imagenes.length - 1;
     }
@@ -171,6 +173,9 @@ const mostrarTodaspeliculas = (traeTodasPeliculas) => {
     divTodasPeliculas.addEventListener('click', () => {
       mostraObjetoTodaP(element);
     });
+    if (element.poster_path === null) {
+      divTodasPeliculas.style.display = 'none';
+    }
   });
 };
 
@@ -202,12 +207,15 @@ const mostrarTodasSeries = (todasSeries) => {
     divTodasSeries.addEventListener('click', () => {
       mostraObjetoTodaS(element);
     });
+    if (element.poster_path === null) {
+      divTodasSeries.style.display = 'none';
+    }
   });
 };
 
 expobusqueda().then((responseText) => {
   const data = busquedaPeliculaSeries(responseText);
-  document.getElementById('boton-buscar').addEventListener('click', () => {
+  btnBuscar.addEventListener('click', () => {
     const valorTexto = document.getElementById('mi-Busqueda');
     vista1.classList.add('hide');
     vistaCaracteristicas.classList.remove('hide');
@@ -249,4 +257,12 @@ titulo1.addEventListener('click', () => {
   secPeliculas.classList.add('hide');
   vistaCaracteristicas.classList.add('hide');
   vista1.classList.remove('hide');
+});
+btnBuscar.addEventListener('click', () => {
+  secPeliculas.classList.add('hide');
+  secSeries.classList.add('hide');
+});
+
+inputBusqueda.addEventListener('click', (event) => {
+  event.preventDefault();
 });

@@ -2,42 +2,42 @@
   margin: 0%;
   padding: 0%;
 }
+
+body {
+  font-family: sans-serif;
+}
 .hide{
   display:none;
 }
 .contenedorbtn{
     display:flex;
-    background: blueviolet;
+    background:black;
     justify-content: space-evenly;
     }
 .cabecera{
   display: flex;
+  margin-top: 15px;
 }
-.btn-buscar,
+.btn-buscar, 
+.Movies,
+.TvSerie,
 .titulo1{
   padding: 5px;
   font-size: 20px;
-  color: #fff;
-  background-color: #222222;
+  color: #cccccc;
   border: none;
   border-radius: 4px;
   margin: 10px;
- 
-}
-.input-busqueda{
-  font-size: 20px;
+  text-decoration: none;
 }
 
 .navOpciones{
-  margin-top: 13px;
   display: flex;
   list-style: none;
   color: azure;
   font-size: 20px;
 }
-.TvSerie{
-  margin-left: 15px;
-}
+
 .titulo-panel2{
   margin: 0 0 10px;
     font-size: 30px;
@@ -56,9 +56,6 @@
 
     }
 
-    body {
-      font-family: sans-serif;
-    }
     .contenedor {
       width: 100%;
       position: relative;
@@ -66,14 +63,18 @@
     }
     .verMas{
       text-decoration: none;
+      color: black;
+      display: flex;
+      margin-right: 27px;
+      justify-content: flex-end;
     }
+
     .botones {
       font-size: 50px;
       width: 70px;
       height: 70px;
       line-height: 70px;
       text-align: center;
-      position: apsolute;
       color: #fff;
        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
        border-radius: 50%;
@@ -106,7 +107,6 @@
 .headerSeries{
   display: flex;
  justify-content: space-around;
- font-size:20px;
 }
 
 .mostrarPelicula,
@@ -151,9 +151,6 @@ border-radius: 10px;
   border-radius: 10px;
   background-size: cover;
 }
-
-
-
 .panelDerecha {
   height: 99%;
   position: absolute;
@@ -163,3 +160,121 @@ border-radius: 10px;
   width: 33%;
   padding: 0px 30px;
 }
+.TvSerie:hover{
+  color: white;
+}
+.titulo1:hover{
+  color: white;
+}
+.btn-buscar:hover{
+  color: white;
+ } 
+.Movies:hover{
+  color: white;
+}
+.input-busqueda{
+  font-size: 20px;
+}
+@media screen and (min-width:1025px){
+  .titulo1, .btn-buscar,.Movies, .TvSerie, .input-busqueda{
+    font-size: 28px;
+  }
+  .descripcion-panel{
+    font-size: 22px;
+  }
+  .titulo-panel2{
+    font-size: 25px;
+  }
+  .verMas{
+    font-size:x-large;
+  }
+}
+
+@media screen and (max-width:1024px)and (min-width:376px){
+  .titulo1, .btn-buscar,.Movies, .TvSerie{
+    font-size: 25px;
+  }
+  .cajas{
+    width: 230px;
+    height: 330px;
+  }
+  .input-busqueda{
+    font-size: 30px;
+  }
+  .atras, .adelante{
+    margin-top: -340px;
+  }
+  .descripcion-panel{
+    font-size: 25px;
+  }
+  .titulo-panel2{
+    font-size: 35px;
+  }
+  .verMas, .t-movies, .t-series{
+    font-size: 30px;
+    text-align: center;
+  }
+  .divContenedor{
+    flex-direction: column;
+  }
+  .imagenes{
+    width: 600px;
+    margin-left: 150px;
+    margin-top: 30px;
+  }
+  .descripcion{
+    font-size: 30px;
+  }
+  .titulo{
+    text-align: center;
+  }
+}
+@media screen and (max-width:375px){
+  .TvSerie, .Movies, .titulo1, .btn-buscar, .input-busqueda{
+    font-size: 10px;
+  }
+  .verMas{
+    font-size: small;
+
+  }
+  .imagenCss{
+  height: 200px ;
+  }
+  .adelante, .atras{
+    margin-top: -140px;
+    font-size: 30px;
+  }
+  .panelDerecha{
+    display: none;
+  }
+  .headerPeliculas, .headerSeries, .t-movies, .t-series{
+    font-size: 11px;
+    text-align: center;
+  }
+  .cajas{
+    width:100px;
+    height:120px;
+  }
+  .divContenedor{
+    flex-direction: column;
+    margin: 30px;
+  }
+  .titulo{
+    font-size: 20px;
+    text-align: center;
+  }
+  .descripcion{
+    font-size: 15px;
+  }
+  .imagenes{
+    width: 310px;
+    height: 400px;
+    margin: 0em;
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
